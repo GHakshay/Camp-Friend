@@ -17,6 +17,7 @@ var imageFilter = function (req, file, cb) {
     return cb(new Error('Only image files are allowed!'), false);
   }
   cb(null, true);
+  
 };
 var upload = multer({ storage: storage, fileFilter: imageFilter });
 
